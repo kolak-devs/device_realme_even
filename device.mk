@@ -256,6 +256,7 @@ PRODUCT_PACKAGES += \
     TelephonyOverlayEven \
     WifiResOverlayEven \
     TetheringResOverlayEven \
+    LineageSettingsProviderOverlayEven \
     CarrierConfigOverlayEven \
     LauncherOverlayEven \
     OplusDozeOverlayEven
