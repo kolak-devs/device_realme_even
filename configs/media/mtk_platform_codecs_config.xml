@@ -8,11 +8,6 @@
         <Video name="cpu.boost.mode"
                cluster="0"
                minFrequency="774000"/>
-        <Video name="c2.mtk.mpeg4.decoder"
-               type="video/mp4v-es"
-               driverIntf="v4l2"
-               maxConcurrentInstances="16"
-               colorConvertPixelFormat="4096" />
         <Video name="c2.mtk.h263.decoder"
                type="video/3gpp"
                driverIntf="v4l2"
