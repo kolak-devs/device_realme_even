@@ -6,11 +6,11 @@
     <!-- ================================================================== -->
 
     <path name="gpu_dvfs_margin">/sys/kernel/ged/hal/timer_base_dvfs_margin</path>
-    <int name="gpu_dvfs_margin_boost">50</int>
+    <int name="gpu_dvfs_margin_boost">20</int>
     <int name="gpu_dvfs_margin_default">30</int>
 
     <path name="gpu_dvfs_step">/sys/kernel/ged/hal/loading_base_dvfs_step</path>
-    <int name="gpu_dvfs_step_boost">16</int>
+    <int name="gpu_dvfs_step_boost">80</int>
     <int name="gpu_dvfs_step_default">103</int>
 
     <path name="gpu_boost_level">/sys/kernel/ged/hal/gpu_boost_level</path>
@@ -95,43 +95,39 @@
     <hint name="scroll_input">
         <res name="cpu_min_c0">-1</res>
         <res name="cpu_min_c1">-1</res>
-        <res name="cci_freq">1</res>
-        <res name="uclamp_fg">75</res>
-        <res name="uclamp_top">85</res>
+        <res name="uclamp_fg">60</res>
+        <res name="uclamp_top">65</res>
         <res name="uclamp_top_lat">1</res>
-        <int name="duration_ms">400</int>
+        <int name="duration_ms">300</int>
     </hint>
 
     <hint name="scroll_prefiling">
         <res name="cpu_min_c0">-1</res>
         <res name="cpu_min_c1">-1</res>
         <res name="dram_min">-1</res>
-        <res name="cci_freq">1</res>
-        <res name="uclamp_fg">75</res>
-        <res name="uclamp_top">85</res>
+        <res name="uclamp_fg">60</res>
+        <res name="uclamp_top">65</res>
         <res name="uclamp_top_lat">1</res>
-        <int name="duration_ms">400</int>
+        <int name="duration_ms">300</int>
     </hint>
 
     <hint name="scroll_vertical">
         <res name="cpu_min_c0">-1</res>
         <res name="cpu_min_c1">-1</res>
-        <res name="cci_freq">1</res>
-        <res name="uclamp_fg">75</res>
-        <res name="uclamp_top">85</res>
+        <res name="uclamp_fg">60</res>
+        <res name="uclamp_top">65</res>
         <res name="uclamp_top_lat">1</res>
-        <int name="duration_ms">400</int>
+        <int name="duration_ms">300</int>
     </hint>
 
     <hint name="scroll_scroller">
         <res name="cpu_min_c0">-1</res>
         <res name="cpu_min_c1">-1</res>
         <res name="gpu_boost">1</res>
-        <res name="cci_freq">1</res>
-        <res name="uclamp_fg">75</res>
-        <res name="uclamp_top">85</res>
+        <res name="uclamp_fg">60</res>
+        <res name="uclamp_top">65</res>
         <res name="uclamp_top_lat">1</res>
-        <int name="duration_ms">400</int>
+        <int name="duration_ms">300</int>
     </hint>
 
     <!-- ================================================================== -->
@@ -198,13 +194,11 @@
         <res name="cpu_min_c1">-1</res>
         <res name="gpu_boost">1</res>
         <res name="dram_min">-1</res>
-        <res name="cci_freq">1</res>
-        <res name="uclamp_fg">55</res>
-        <res name="uclamp_top">55</res>
+        <res name="uclamp_fg">45</res>
+        <res name="uclamp_top">45</res>
         <res name="uclamp_fg_max">100</res>
         <res name="uclamp_top_lat">1</res>
-        <res name="pmqos_cpu_dma_latency">44</res>
-        <int name="duration_ms">1000</int>
+        <int name="duration_ms">500</int>
     </hint>
 
     <hint name="transition_lite">
@@ -238,8 +232,7 @@
     </hint>
 
     <hint name="rotation_latency">
-        <res name="pmqos_cpu_dma_latency">44</res>
-        <res name="uclamp_top">70</res>
+        <res name="uclamp_top">50</res>
         <res name="cpu_min_c0">-1</res>
         <int name="duration_ms">300</int>
     </hint>
@@ -263,9 +256,8 @@
         <res name="cpuset_top">1</res>
         <res name="gpu_boost">1</res>
         <res name="dram_min">-1</res>
-        <res name="cci_freq">1</res>
-        <res name="uclamp_fg">75</res>
-        <res name="uclamp_top">85</res>
+        <res name="uclamp_fg">60</res>
+        <res name="uclamp_top">65</res>
     </hint>
 
     <!-- ================================================================== -->
@@ -309,9 +301,8 @@
         <res name="cpu_min_c0">-1</res>
         <res name="cpu_min_c1">-1</res>
         <res name="gpu_boost">1</res>
-        <res name="cci_freq">1</res>
-        <res name="uclamp_fg">55</res>
-        <int name="duration_ms">400</int>
+        <res name="uclamp_fg">45</res>
+        <int name="duration_ms">300</int>
     </hint>
 
     <hint name="drag_start">
@@ -330,28 +321,22 @@
     <hint name="early_wakeup">
         <res name="gpu_boost">1</res>
         <res name="dram_min">-1</res>
-        <res name="uclamp_fg">70</res>
-        <res name="uclamp_top">70</res>
-        <res name="uclamp_fg_max">100</res>
-        <res name="uclamp_top_lat">1</res>
-        <res name="pmqos_cpu_dma_latency">44</res>
+        <res name="uclamp_fg">50</res>
+        <res name="uclamp_top">50</res>
         <res name="gpu_dvfs_margin">1</res>
         <res name="gpu_dvfs_step">1</res>
         <res name="cci_freq">1</res>
-        <res name="cpu_max_c1">1</res>
-        <int name="duration_ms">1000</int>
+        <int name="duration_ms">500</int>
     </hint>
 
     <hint name="expensive_rendering">
         <res name="gpu_boost">1</res>
         <res name="dram_min">-1</res>
-        <res name="cci_freq">1</res>
-        <res name="uclamp_fg">75</res>
-        <res name="uclamp_top">75</res>
+        <res name="uclamp_fg">55</res>
+        <res name="uclamp_top">55</res>
         <res name="uclamp_fg_max">100</res>
         <res name="gpu_dvfs_margin">1</res>
         <res name="gpu_dvfs_step">1</res>
-        <res name="pmqos_cpu_dma_latency">44</res>
         <int name="duration_ms">0</int>
     </hint>
 
@@ -373,8 +358,7 @@
         <res name="cpu_min_c1">-1</res>
         <res name="gpu_boost">1</res>
         <res name="dram_min">-1</res>
-        <res name="cci_freq">1</res>
-        <res name="uclamp_top">75</res>
+        <res name="uclamp_top">50</res>
         <int name="duration_ms">0</int>
     </hint>
 
@@ -463,10 +447,10 @@
 
     <ux_threads>
         <role name="rt"          uclamp_min="512" uclamp_max="1024"/>
-        <role name="ui"          uclamp_min="450" uclamp_max="1024"/>
-        <role name="render"      uclamp_min="550" uclamp_max="1024"/>
-        <role name="gl"          uclamp_min="450" uclamp_max="900"/>
-        <role name="hwui_task"   uclamp_min="350" uclamp_max="800"/>
+        <role name="ui"          uclamp_min="300" uclamp_max="1024"/>
+        <role name="render"      uclamp_min="400" uclamp_max="1024"/>
+        <role name="gl"          uclamp_min="300" uclamp_max="900"/>
+        <role name="hwui_task"   uclamp_min="250" uclamp_max="800"/>
         <role name="binder_pool" uclamp_min="200" uclamp_max="700"/>
     </ux_threads>
 
