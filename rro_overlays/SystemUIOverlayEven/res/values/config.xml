@@ -11,4 +11,10 @@
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">60</integer>
 
+    <!-- Use separate Quick Settings header instead of combined. -->
+    <bool name="flag_combined_qs_headers">false</bool>
+
+    <!-- Max refresh rate for AOD. -->
+    <integer name="config_aodMaxRefreshRate">60</integer>
+
 </resources>

@@ -72,7 +72,7 @@
 
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
-    <string name="config_wifi_tcp_buffers" translatable="false">1730560,3461120,6922240,524288,2097152,6922240</string>
+    <string name="config_wifi_tcp_buffers" translatable="false">1730560,3461120,6922240,524288,1048576,4525824</string>
 
     <!-- Scan interval schedule for connected WiFi (seconds). -->
     <integer-array name="config_wifiConnectedScanIntervalScheduleSec">

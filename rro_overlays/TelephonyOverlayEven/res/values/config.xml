@@ -24,4 +24,10 @@
 
     <!-- String indicating the package name of the device ImsService implementation for RCS. -->
     <string name="config_ims_rcs_package">com.mediatek.ims</string>
+
+    <!-- Whether hearing aid compatibility is enabled. -->
+    <bool name="hac_enabled">true</bool>
+
+    <!-- Whether LTE is enabled by default. -->
+    <bool name="config_enabled_lte">true</bool>
 </resources>
