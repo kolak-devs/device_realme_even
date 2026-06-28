@@ -228,7 +228,6 @@
         <name>vendor.mediatek.hardware.pq</name>
         <transport>hwbinder</transport>
         <fqname>@2.2::IPictureQuality/default</fqname>
-        <fqname>@2.15::IPictureQuality/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.videotelephony</name>
