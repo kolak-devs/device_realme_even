@@ -21,17 +21,15 @@ $(ENGMODE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /system/lib64/$(notdir $@) $@
 
 VENDOR_SYMLINKS := \
-    $(TARGET_OUT_VENDOR)/lib \
-    $(TARGET_OUT_VENDOR)/lib64 \
     $(TARGET_OUT_VENDOR)/lib/hw \
-    $(TARGET_OUT_VENDOR)/lib64/hw \
-    $(TARGET_OUT_VENDOR)/lib/egl \
-    $(TARGET_OUT_VENDOR)/lib64/egl
+    $(TARGET_OUT_VENDOR)/lib64/hw
 
 $(VENDOR_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) echo "Making vendor symlinks"
 	@mkdir -p $(TARGET_OUT_VENDOR)/lib/hw
 	@mkdir -p $(TARGET_OUT_VENDOR)/lib64/hw
+	@mkdir -p $(TARGET_OUT_VENDOR)/lib/egl
+	@mkdir -p $(TARGET_OUT_VENDOR)/lib64/egl
 	@ln -sf libSoftGatekeeper.so $(TARGET_OUT_VENDOR)/lib/hw/gatekeeper.default.so
 	@ln -sf libSoftGatekeeper.so $(TARGET_OUT_VENDOR)/lib64/hw/gatekeeper.default.so
 	@ln -sf libMcGatekeeper.so $(TARGET_OUT_VENDOR)/lib64/hw/gatekeeper.trustonic.so
