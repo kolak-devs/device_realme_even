@@ -24,7 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Display
-TARGET_SCREEN_DENSITY := 320
+TARGET_SCREEN_DENSITY := 280
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1600
