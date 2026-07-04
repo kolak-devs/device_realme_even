@@ -197,10 +197,9 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 
-# Oplus
+# libtinyxml-v34
 PRODUCT_PACKAGES += \
-    vendor.oplus.hardware.osense.client-V1-ndk_platform \
-    vendor.oplus.hardware.performance-V1-ndk_platform
+    libtinyxml2-v34
 
 # Lights
 PRODUCT_PACKAGES += \
