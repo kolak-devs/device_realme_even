@@ -79,11 +79,40 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             grep -q "libcamera_metadata_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim.so" "${2}"
             ;;
-        vendor/lib*/hw/vendor.mediatek.hardware.pq@2.15-impl.so)
-            [ "$2" = "" ] && return 0
+        vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "android.hardware.sensors@1.0-convert-shared.so" "${2}"
             "${PATCHELF}" --replace-needed "libtinyxml2.so" "libtinyxml2-v34.so" "${2}"
+            # Patch threadLoop to init PQInput/PQOutput when table-loads fail
+            python3 -c "
+import struct
+with open('${2}', 'r+b') as f:
+    f.seek(0x3873c)
+    f.write(struct.pack('<IIIIIII',
+        0x9140a279,  # add x25, x19, #0x28, lsl #12
+        0x913fe339,  # add x25, x25, #0xff8
+        0x1011f0e0,  # adr x0, 5c560
+        0xa9088320,  # stp x0, x0, [x25, #0x88]
+        0x2a1f03e1,  # mov w1, wzr
+        0x5280c402,  # mov w2, #0x620
+        0x94007023,  # bl memset
+    ))
+    # Extend BSS: p_memsz at ELF program header
+    f.seek(0)
+    hdr = f.read(64)
+    e_phoff = struct.unpack('<Q', hdr[32:40])[0]
+    e_phentsize = struct.unpack('<H', hdr[54:56])[0]
+    e_phnum = struct.unpack('<H', hdr[56:58])[0]
+    for i in range(e_phnum):
+        f.seek(e_phoff + i * e_phentsize)
+        ph = f.read(56)
+        p_type = struct.unpack('<I', ph[0:4])[0]
+        p_vaddr = struct.unpack('<Q', ph[16:24])[0]
+        if p_type == 1 and p_vaddr == 0x5bfe8:
+            f.seek(e_phoff + i * e_phentsize + 40)
+            f.write(struct.pack('<Q', 0xb98))
+            break
+"
             ;;
         vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc)
             sed -i '/vts/Q' "$2"
