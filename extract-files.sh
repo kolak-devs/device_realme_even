@@ -83,6 +83,9 @@ function blob_fixup {
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "android.hardware.sensors@1.0-convert-shared.so" "${2}"
             "${PATCHELF}" --replace-needed "libtinyxml2.so" "libtinyxml2-v34.so" "${2}"
+            # Create symlink so libpq_cust.so resolves to libpq_cust_base.so
+            ln -sf libpq_cust_base.so "${2%/*}/../../libpq_cust.so"
+            ln -sf libpq_cust_base.so "${2%/*}/../../../lib/libpq_cust.so"
             # Patch threadLoop to init PQInput/PQOutput when table-loads fail
             python3 -c "
 import struct
