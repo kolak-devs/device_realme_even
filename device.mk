@@ -20,6 +20,9 @@ $(call inherit-product-if-exists, packages/apps/PocketMode/pocket_mode.mk)
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
@@ -401,6 +404,12 @@ PRODUCT_PACKAGES += \
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch-service.oplus
+    
+# Speed up
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3QuickStep \
+    Settings \
+    SystemUI
 
 $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/include)
 
