@@ -12,7 +12,7 @@ MTK=hardware/mediatek/Android.bp
 if ! [ -a $MTK ]; then git clone https://github.com/LineageOS/android_hardware_mediatek hardware/mediatek
 fi
 OPLUS=hardware/oplus/Android.bp
-if ! [ -a $OPLUS ]; then git clone https://github.com/LineageOS/android_hardware_oplus hardware/oplus
+if ! [ -a $OPLUS ]; then git clone https://github.com/kolak-devs/android_hardware_oplus hardware/oplus
 fi
 VT-IMS=vendor/mediatek/ims/ims.mk
 if ! [ -a $VT-IMS ]; then rm -rf vendor/mediatek/ims && git clone https://github.com/techyminati/android_vendor_mediatek_ims.git vendor/mediatek/ims
