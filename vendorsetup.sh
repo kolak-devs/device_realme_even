@@ -1,6 +1,6 @@
 echo start cloning repos
 VT=vendor/realme/even/even-vendor.mk
-if ! [ -a $VT ]; then rm -rf vendor/realme/even && git clone -b main-oss https://github.com/kolak-devs/vendor_realme_even_rui4.git --depth=1 vendor/realme/even
+if ! [ -a $VT ]; then git clone -b main-oss https://github.com/kolak-devs/vendor_realme_even_rui4.git --depth=1 vendor/realme/even
 fi
 KT=kernel/realme/even/KernelSU/kernel/Kconfig
 if ! [ -a $KT ]; then rm -rf kernel/realme/even && git clone --recurse-submodules https://github.com/Badmaneers/zenium_realme_even --depth=1 kernel/realme/even
