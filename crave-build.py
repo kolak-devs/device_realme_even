@@ -248,7 +248,7 @@ def build_command(cfg: dict) -> str:
     steps += [
         f"git clone {local_manifest_url} --depth 1 -b {local_branch} .repo/local_manifests",
         f"/opt/crave/resync.sh",
-        f"export BUILD_USERNAME=DumbDragon",
+        f"export BUILD_USERNAME=ismasrull",
         f"export BUILD_HOSTNAME=crave",
         f"source build/envsetup.sh",
         f"breakfast {device} {variant}",
