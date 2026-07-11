@@ -359,7 +359,7 @@ def main():
     )
     local_branch = prompt(
         "Branch in local manifest repo to use",
-        default="lineage-21",
+        default="sixteen-qpr2",
         required=True,
     )
 

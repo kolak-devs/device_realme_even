@@ -9,7 +9,7 @@ MTK_SEPOLICY=device/mediatek/sepolicy_vndr/SEPolicy.mk
 if ! [ -a $MTK_SEPOLICY ]; then git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr device/mediatek/sepolicy_vndr
 fi
 MTK=hardware/mediatek/Android.bp
-if ! [ -a $MTK ]; then git clone https://github.com/LineageOS/android_hardware_mediatek hardware/mediatek
+if ! [ -a $MTK ]; then rm -rf hardware/mediatek && git clone https://github.com/LineageOS/android_hardware_mediatek hardware/mediatek
 fi
 OPLUS=hardware/oplus/Android.bp
 if ! [ -a $OPLUS ]; then rm -rf hardware/oplus && git clone https://github.com/kolak-devs/android_hardware_oplus hardware/oplus

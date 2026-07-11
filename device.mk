@@ -450,6 +450,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     wpa_supplicant \
     hostapd \
+    chipinfo \
     libwifi-hal-wrapper
 
 PRODUCT_COPY_FILES += \
