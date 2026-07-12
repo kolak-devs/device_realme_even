@@ -171,7 +171,7 @@ def abort():
 # ── Data ──────────────────────────────────────────────────────────────────────
 # Default local manifest repo — used to pre-fill the prompt, never hardcoded
 # into the final command. Override per-run when prompted in STEP 3.
-DEFAULT_LOCAL_MANIFEST_URL = "https://github.com/Badmaneers/even-manifests.git"
+DEFAULT_LOCAL_MANIFEST_URL = "https://github.com/kolak-devs/even-manifests.git"
 
 SOURCES = [
     # (crave_id, display_name, url, default_branch, crave_listed)
@@ -359,7 +359,7 @@ def main():
     )
     local_branch = prompt(
         "Branch in local manifest repo to use",
-        default="sixteen-qpr2",
+        default="lineage-23.2",
         required=True,
     )
 
