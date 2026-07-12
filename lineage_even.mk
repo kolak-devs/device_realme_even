@@ -18,7 +18,7 @@ PRODUCT_NAME := lineage_even
 PRODUCT_DEVICE := even
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := even
+PRODUCT_MODEL := RMX3191
 
 # Misc
 TARGET_FACE_UNLOCK_SUPPORTED := true
@@ -26,7 +26,7 @@ TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
-# Build info - overridden at boot by init.cpp
+# Build info
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DeviceName=even \
-    DeviceProduct=even
+    PRIVATE_BUILD_DESC="sys_mssi_64_cn_armv82-user 13 TP1A.220905.001 1716367279348 release-keys"
+    BUILD_FINGERPRINT := realme/RMX3191/RMX3191:13/TP1A.220905.001/1716367279348:user/release-keys
