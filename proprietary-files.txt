@@ -492,10 +492,6 @@ odm/lib64/libosenseaidlhalclient.so
 odm/lib64/vendor.oplus.hardware.charger@1.0.so
 odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so;MODULE_SUFFIX=_odm
 
-# Chipinfo
-vendor/bin/chipinfo
-vendor/etc/init/chipinfo_init.rc
-
 # Camera
 lib64/vendor.oplus.hardware.cameraextension@1.0.so
 odm/lib/liboplus_platform_hwi.so

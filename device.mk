@@ -351,6 +351,7 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     init.target.rc \
     ueventd.mtk.rc \
+    chipinfo \
     ueventd.oplus.rc
 
 # Fastboot
