@@ -79,6 +79,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor
 
 # Camera
+$(call soong_config_set,libcameraservice,ext_lib,//$(LOCAL_PATH):libcameraservice_extension.even)
+
 PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0.vendor \
     android.hardware.camera.device@3.6.vendor \

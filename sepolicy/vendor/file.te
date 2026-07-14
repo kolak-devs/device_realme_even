@@ -51,3 +51,6 @@ type proc_sched_assist, fs_type, proc_type;
 
 # GPU
 type vendor_sysfs_gpu, fs_type, sysfs_type;
+
+# Torch
+type vendor_torch_sysfs, fs_type, sysfs_type;
