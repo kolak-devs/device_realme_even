@@ -251,13 +251,13 @@ def build_command(cfg: dict) -> str:
         f"export BUILD_USERNAME=ismasrull",
         f"export BUILD_HOSTNAME=crave",
         f"source build/envsetup.sh",
-        f"breakfast {device} {variant}",
+        f"lunch {device}-{variant}",
     ]
 
     if cfg.get("clean_build"):
         steps.append("m clean")
 
-    steps.append(f"mka {target}")
+    steps.append(f"{target}")
 
     inner = "; \\\n".join(f" {s}" for s in steps)
     return f'crave run --no-patch -- "\\\n{inner}"'
