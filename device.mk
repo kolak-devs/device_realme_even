@@ -76,7 +76,8 @@ TARGET_EXCLUDES_AUDIOFX := true
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.1.vendor
+    android.hardware.bluetooth@1.1.vendor \
+    android.hardware.bluetooth-service.mediatek
 
 # Camera
 $(call soong_config_set,libcameraservice,ext_lib,//$(LOCAL_PATH):libcameraservice_extension.even)
