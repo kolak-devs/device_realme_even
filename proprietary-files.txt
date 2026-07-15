@@ -2571,6 +2571,9 @@ vendor/bin/thermal
 vendor/bin/thermal_manager
 vendor/bin/thermalloadalgod
 vendor/etc/.tp/.ht120.mtc
+vendor/etc/.tp/.thermal_policy_00
+vendor/etc/.tp/.thermal_policy_03
+vendor/etc/.tp/.thermal_policy_05
 vendor/etc/.tp/.thermal_policy_08
 vendor/etc/.tp/thermal.conf
 vendor/etc/.tp/thermal.off.conf
