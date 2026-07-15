@@ -451,8 +451,6 @@ vendor/etc/audio_param/VolumeGainMap_AudioParam.xml
 vendor/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param/Volume_AudioParam.xml
 vendor/etc/audio_param/Volume_ParamUnitDesc.xml
-vendor/etc/aurisys_config.xml
-vendor/etc/aurisys_config_rv.xml
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
@@ -2241,7 +2239,6 @@ vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 # Media
 vendor/bin/vpud
 vendor/etc/init/vpud.rc
-vendor/etc/mtk_platform_codecs_config.xml
 vendor/lib/libHEVCdec_sa.ca7.android.so
 vendor/lib/libJpgEncPipe.so
 vendor/lib/libcapctrl.so
