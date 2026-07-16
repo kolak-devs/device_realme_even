@@ -24,6 +24,10 @@ bool supportsTorchStrengthControlExt() {
     return access(kTorchBrightnessPath.c_str(), W_OK) == 0;
 }
 
+bool supportsSetTorchModeExt() {
+    return false;
+}
+
 int32_t getTorchDefaultStrengthLevelExt() {
     return 3;
 }
@@ -38,4 +42,9 @@ int32_t getTorchStrengthLevelExt() {
 
 void setTorchStrengthLevelExt(int32_t torchStrength, bool enabled) {
     writeValue(kTorchBrightnessPath, (enabled && torchStrength > 0) ? torchStrength : 0);
+}
+
+void setTorchModeExt(bool enabled) {
+    int32_t strength = getTorchDefaultStrengthLevelExt();
+    setTorchStrengthLevelExt(enabled ? strength : 0, enabled);
 }
