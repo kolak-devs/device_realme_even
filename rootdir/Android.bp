@@ -74,9 +74,3 @@ prebuilt_etc {
     vendor: true,
 }
 
-prebuilt_etc {
-    name: "ueventd.oplus.rc",
-    src: "etc/ueventd.oplus.rc",
-    filename: "ueventd.rc",
-    device_specific: true,
-}

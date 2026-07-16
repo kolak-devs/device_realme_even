@@ -161,6 +161,7 @@
 /sys/class/leds/red   delay_off      0664  system   system
 /sys/class/leds/blue   delay_on      0664  system   system
 /sys/class/leds/blue   delay_off      0664  system   system
+/sys/devices/platform/flashlights_even torchbrightness 0660 system camera
 
 #GPIO
 /dev/mtgpio               0600   radio      root
@@ -189,6 +190,12 @@
 
 #MTK In-House TEE
 /dev/ttyACM0              0660   radio      radio
+
+# Charger
+/sys/class/oplus_chg/*  mmi_charging_enable    0660    system  system
+
+# WiFi
+firmware_directories /odm/etc/wifi/
 
 subsystem adf
     devname uevent_devname
