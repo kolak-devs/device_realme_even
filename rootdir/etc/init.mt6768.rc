@@ -10,6 +10,9 @@ on early-init
 
 on init
 
+    # enable rcu_expedited
+    write /sys/kernel/rcu_expedited 1
+
 # change lk_env permission
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
