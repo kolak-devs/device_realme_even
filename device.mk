@@ -14,8 +14,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # IMS-Vendor
 $(call inherit-product-if-exists, vendor/mediatek/ims/ims.mk)
 
-# Pocket Mode
-$(call inherit-product-if-exists, packages/apps/PocketMode/pocket_mode.mk)
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
 
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
