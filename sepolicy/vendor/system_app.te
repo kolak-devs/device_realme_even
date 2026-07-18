@@ -4,3 +4,14 @@ allow system_app proc_pagetypeinfo:file r_file_perms;
 # Zram
 allow system_app sysfs_zram:dir search;
 allow system_app sysfs_zram:file r_file_perms;
+
+# RealmeParts sysfs access
+allow system_app vendor_sysfs_usb_supply:dir search;
+allow system_app vendor_sysfs_graphics:dir search;
+allow system_app sysfs_leds:dir search;
+allow system_app vendor_sysfs_usb_supply:file r_file_perms;
+allow system_app vendor_sysfs_usb_supply:file w_file_perms;
+allow system_app vendor_sysfs_graphics:file r_file_perms;
+allow system_app vendor_sysfs_graphics:file w_file_perms;
+allow system_app sysfs_leds:file r_file_perms;
+allow system_app sysfs_leds:file w_file_perms;
