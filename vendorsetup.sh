@@ -21,5 +21,5 @@ POCKET=packages/apps/PocketMode/pocket_mode.mk
 if ! [ -a $POCKET ]; then git clone https://github.com/nishant6342/packages_apps_PocketMode packages/apps/PocketMode
 fi
 DOLBY=hardware/dolby/dolby.mk
-if ! [ -a $DOLBY ]; then git clone -b sony-1.2 https://github.com/swiitch-OFF-Lab/hardware_dolby.git  hardware/dolby
+if ! [ -a $DOLBY ]; then git clone -b A16 https://github.com/FlamingoOS-Devices/hardware_dolby.git  hardware/dolby
 fi
