@@ -18,7 +18,7 @@ PRODUCT_NAME := lineage_even
 PRODUCT_DEVICE := even
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := RMX3191
+PRODUCT_MODEL := even
 
 # Misc
 TARGET_FACE_UNLOCK_SUPPORTED := true
@@ -28,7 +28,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-realme
 
 # Build info
 PRODUCT_BUILD_PROP_OVERRIDES += \
-BuildDesc="sys_mssi_64_cn_armv82-user 13 TP1A.220905.001 1716367279348 release-keys" \
-BuildFingerprint=realme/RMX3191/RMX3191:13/TP1A.220905.001/1716367279348:user/release-keys \
 DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
 DeviceProduct=$(PRODUCT_SYSTEM_NAME)
