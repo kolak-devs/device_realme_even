@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_even.mk
+    $(LOCAL_DIR)/custom_even.mk
