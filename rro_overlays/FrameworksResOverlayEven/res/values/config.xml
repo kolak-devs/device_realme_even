@@ -451,9 +451,6 @@
     <!-- If this is true, device supports Sustained Performance Mode. -->
     <bool name="config_sustainedPerformanceModeSupported">false</bool>
 
-    <!-- If true, the device supports high-performance transitions. -->
-    <bool name="config_deviceSupportsHighPerfTransitions">false</bool>
-
     <!-- If true, the device supports rounded corners on windows. -->
     <bool name="config_supportsRoundedCornersOnWindows">false</bool>
 
