@@ -445,7 +445,7 @@ PRODUCT_PACKAGES += \
     libbinder-v32 \
     libhidlbase-v32  \
     libutils-v32 \
-    libstagefright_foundation-v33.vendor
+    libstagefright_foundation-v33
 
 PRODUCT_PACKAGES += \
     libshim_ui\
